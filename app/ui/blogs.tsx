@@ -1,5 +1,4 @@
 import Link from "next/link";
-<Link href={`blogs/${blog.id}`}>{blog.title}</Link>;
 
 interface Blog {
   id: string;
@@ -7,7 +6,6 @@ interface Blog {
 }
 
 export default async function Blogs() {
-
   const res = await fetch("https://api.vercel.app/blog");
   const blogs: Blog[] = await res.json();
 
@@ -17,7 +15,9 @@ export default async function Blogs() {
         <div className="p-4 border rounded-lg" key={blog.id}>
           <div className="h-40 rounded-md mb-4">{blog.id}</div>
 
-          <div className="h-6 rounded w-3/4 mb-3">{blog.title}</div>
+          <div className="h-6 rounded w-3/4 mb-3">
+            <Link href={`/blogs/${blog.id}`}>{blog.title}</Link>
+          </div>
 
           <div className="space-y-2">
             <div className="h-4 rounded w-full"></div>
