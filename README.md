@@ -1,3 +1,5 @@
+ปลวัชร สุทธมา 673450473-2
+
 # Fetching Data - Next.js
 
 โปรเจกต์ตัวอย่างสำหรับศึกษา **Next.js, React, TypeScript, Prisma, SQLite และการ Fetch ข้อมูลจาก API**
